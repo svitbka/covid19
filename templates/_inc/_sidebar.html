@@ -1,0 +1,27 @@
+{% load static %}
+
+<div class="sidebar" data-color="orange">
+    <div class="logo">
+        <a href="{% url 'home' %}"><img src="{% static 'assets/img/logo.png' %}" alt=""></a>
+    </div>
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li>
+                <a href="{% url 'home' %}">
+                    <i class="now-ui-icons"><img src="{% static 'assets/img/statistic.png' %}" alt=""></i>
+                    <p>СТАТИСТИКА</p>
+                </a>
+            </li>
+                       
+            {% for category in categories %}
+            <li>
+                <a href={{ category.get_absolute_url}}>
+                    <i class="now-ui-icons"><img src="{{ category.photo.url }}" alt=""></i>
+                    <p>{{ category.title }}</p>
+                </a>
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>

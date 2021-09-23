@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="panel-header panel-header-lg">
+    
+    {% for val in data1 %}
+      
+    {% endfor %}
+      
+    <canvas id="myCanvas"></canvas>
+
+    {{ data1|json_script:"generate-data1" }}
+    {{ data2|json_script:"generate-data2" }}
+    {{ lables|json_script:"lables" }}
+
+</div>
+
+<div class="content">
+    <div class="row">
+       <div class="col-md-6">
+         <div class="card">
+           <div class="card-header">
+            <canvas id="dead-canvas" width="800" height="450"></canvas>
+
+            {{ deadData1|json_script:"dead-data1" }}
+            {{ deadData2|json_script:"dead-data2" }}
+            {{ deadLables|json_script:"dead-lables" }}
+ 
+           </div>
+         </div>
+       </div>
+       <div class="col-md-6">
+         <div class="card">
+           <div class="card-header">
+             <div class="list-group">
+               <div class="list-group-item list-group-item-action">
+                 <div class="d-flex w-100 justify-content-between">
+                   <h5 class="mb-1">Общая статистика</h5>
+                 </div>
+               </div>
+               <div class="list-group-item list-group-item-action">
+                 <div class="d-flex w-100 justify-content-between">
+                   <span><img src="{% static 'assets/img/bel.png' %}" alt="">Беларусь</span>
+                 </div>
+                 <div class="container">
+                   <div class="row align-items-start">
+                     <div class="col">
+                       <h7 class="mb-1">Все случаи заболевания</h7>
+                       <h4 class="mb-1">{{ all_cases_disease_belarus }}</h4>
+                     </div>
+                     <div class="col">
+                       <h7 class="mb-1">Летальные исходы</h7>
+                       <h4 class="mb-1">{{ all_deaths_belarus }}</h4>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="list-group-item list-group-item-action">
+                 <div class="d-flex w-100 justify-content-between">
+                   <span><img src="{% static 'assets/img/world.png' %}" alt="">Весь мир</span>
+                 </div>
+                 <div class="container">
+                   <div class="row align-items-start">
+                     <div class="col">
+                       <h7 class="mb-1">Все случаи заболевания</h7>
+                       <h4 class="mb-1">{{ all_cases_disease_world }}</h4>
+                     </div>
+                     <div class="col">
+                       <h7 class="mb-1">Летальные исходы</h7>
+                       <h4 class="mb-1">{{ all_deaths_world }}</h4>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+{% endblock content %}
+    
+    
+

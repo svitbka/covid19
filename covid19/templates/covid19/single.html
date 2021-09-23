@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="content-single">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="cnt">
+                {% for p in post %}
+                {{ p.content|safe }}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="cnt">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="list-group">
+                            <div class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Cтатистика вакцинации</h5>
+                                </div>
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <span><img src="{% static 'assets/img/bel.png' %}" alt="">Беларусь</span>
+                                </div>
+                                <div class="container">
+                                    <div class="row align-items-start">
+                                        <div class="col">
+                                            <h7 class="mb-1">Население</h7>
+                                            <h4 class="mb-1">{{ population }} тыс.</h4>
+                                        </div>
+                                        <div class="col">
+                                            <h7 class="mb-1">Количество вакцини­рованных</h7>
+                                            <h4 class="mb-1">{{ number_of_vaccinated }}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                                <div class="container">
+                                    <div class="row align-items-start">
+                                        <div class="col">
+                                            <h7 class="mb-1">Всего вакцинаций</h7>
+                                            <h4 class="mb-1">{{ total_vaccinations }}</h4>
+                                        </div>
+                                        <div class="col">
+                                            <h7 class="mb-1">Полностью вакцини­ровано</h7>
+                                            <h4 class="mb-1">{{ fully_vaccinated }}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+
+                    {{ vaccination|json_script:"vaccination" }}
+                    <div class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h4 style="text-align: center;">В Беларуси вакцинировано {{ prossent_fully_vaccinated }} % населения</h4>
+                    </div>
+                    </div>
+                    <div class="canvas-pie">
+                        <canvas id="pie-chart" width="800" height="450"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
