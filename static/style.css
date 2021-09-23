@@ -1,0 +1,52 @@
+.row .col-md-6 .card .card-header {
+    height: 400px;
+}
+
+ul > li > a > p {
+    margin-left:50px;
+}
+
+ul > li > a > i > img {
+    width: 25px;
+    height: 25px;
+}
+
+.panel-header {
+    height: 500px; 
+    min-height: auto;
+}
+
+.main-panel .content {
+    min-height: 400px;
+}
+
+.list-group-item .d-flex > span {
+    font-size: 20px;
+    margin-left: 60px;
+}
+.list-group-item .d-flex > span > img {
+    width:40px; 
+    height:40px; 
+    padding: 5px;
+}
+
+.container .row .col {
+    text-align: center;
+}
+
+.container .row .col h4 {
+    margin-top: 10px;
+}
+
+/* .sidebar{
+    margin: 100px;
+} */
+
+.content-single {
+    background-color: white;
+    padding:30px;
+}
+
+.panel-header {
+    padding-top: 0;
+}
