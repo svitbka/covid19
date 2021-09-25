@@ -11,7 +11,7 @@ P.S. This forecast does not claim to be absolutely reliable, since there are man
 
 <p align="center">
   <a href="https://github.com/svitbka/covid19" target="_blank">
-    <img src="https://media.giphy.com/media/yz0035R90ecS2YTKYj/giphy.gif?cid=790b761150ff66ac3356c62a7d1565b72c7d6849d7e6e372&rid=giphy.gif&ct=g" alt="Sublime's custom image" width="750px"/>
+    <img src="https://media.giphy.com/media/erd6Jfxey0rBWhPeKh/giphy.mp4?cid=790b7611a86ba36c4505007b40af327d78daeb353c971d1b&rid=giphy.mp4&ct=g" alt="Sublime's custom image" width="750px"/>
   </a>
 </p>
 
