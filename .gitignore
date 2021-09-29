@@ -1,0 +1,7 @@
+/static
+/media
+/django_cache
+db.json
+db.sqlite3
+passenger_wsgi.py
+settings.py
